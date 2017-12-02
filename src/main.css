@@ -1,0 +1,5 @@
+/* Ejemplo de estilo en botones */
+
+.button {
+  -fx-font-family: "Century Gothic", CenturyGothic, sans-serif;
+}

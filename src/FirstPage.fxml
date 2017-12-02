@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPage">
+   <top>
+      <ListView fx:id="photoList" orientation="HORIZONTAL" prefHeight="150.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+   </top>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <bottom>
+      <HBox prefHeight="153.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#oneEffect" prefHeight="153.0" prefWidth="200.0" text="Blanco y Negro" />
+            <Button mnemonicParsing="false" onAction="#twoEffect" prefHeight="153.0" prefWidth="200.0" text="Frio" />
+            <Button mnemonicParsing="false" onAction="#threeEffect" prefHeight="153.0" prefWidth="200.0" text="Escala de Grises" />
+            <Button mnemonicParsing="false" onAction="#fourEffect" prefHeight="153.0" prefWidth="200.0" text="Acentuado" />
+            <Button mnemonicParsing="false" onAction="#fiveEffect" prefHeight="153.0" prefWidth="200.0" text="Seco" />
+         </children></HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="509.0" prefWidth="656.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="squareImg" fitHeight="500.0" fitWidth="660.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="509.0" prefWidth="342.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="34.0" prefWidth="300.0" text="Brillo:" />
+            <Slider fx:id="brightnessEdit" blockIncrement="0.01" majorTickUnit="0.1" max="1.0" min="-1.0" prefHeight="0.0" prefWidth="340.0" showTickMarks="true" VBox.vgrow="ALWAYS" />
+            <Label prefHeight="38.0" prefWidth="340.0" text="Saturacion:" />
+            <Slider fx:id="saturationEdit" blockIncrement="0.1" majorTickUnit="0.1" max="1.0" min="-1.0" prefHeight="3.0" prefWidth="340.0" showTickMarks="true" />
+            <Label prefHeight="39.0" prefWidth="340.0" text="Matiz:" />
+            <Slider fx:id="hueEdit" blockIncrement="0.1" majorTickUnit="0.1" max="1.0" min="-1.0" prefHeight="25.0" prefWidth="340.0" showTickMarks="true" />
+            <Label prefHeight="21.0" prefWidth="340.0" text="Contraste:" />
+            <Slider fx:id="contrastEdit" blockIncrement="0.1" majorTickUnit="0.1" max="1.0" min="-1.0" prefHeight="43.0" prefWidth="340.0" showTickMarks="true" />
+            <Button mnemonicParsing="false" onAction="#loadImage" prefHeight="45.0" prefWidth="346.0" text="Cargar Imagen" />
+            <Button mnemonicParsing="false" onAction="#saveImgPNG" prefHeight="45.0" prefWidth="340.0" text="Descargar .PNG" />
+            <Button mnemonicParsing="false" onAction="#saveImgJPG" prefHeight="48.0" prefWidth="345.0" text="Descargar .JPG" />
+            <Button mnemonicParsing="false" onAction="#printImage" prefHeight="51.0" prefWidth="344.0" text="Imprimir" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
